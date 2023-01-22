@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "6bc7690c-7d83-4242-b25d-f2c5cc392a6a",
+		"name": "student-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20527530"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "addStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/student/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/student/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStudent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2JmZDNlZWE1ZTM4NjZiNmU3NzI5ZTQiLCJpYXQiOjE2NzM1MTYwMTksImV4cCI6MTcwNTA1MjAxOX0.fYi8rczUyM8iY0lEddouAe2DBiEQrym8-vimiL-N6Nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentName\": \"Shayan Biswas\",\r\n    \"subject\": \"CSE\",\r\n    \"marks\": \"53565\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/student/63bfd79e7e84efe9bb6d5c29/user/63bfd3eea5e3866b6e7729e4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"63bfd79e7e84efe9bb6d5c29",
+								"user",
+								"63bfd3eea5e3866b6e7729e4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStusent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/marks/:userId/:studentId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"marks",
+								":userId",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								},
+								{
+									"key": "studentId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "jwt",
+			"value": ""
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2JmZDI2ZTJkM2I5NDQzZjBhOGU5ZTQiLCJpYXQiOjE2NzM1MTU3MDAsImV4cCI6MTcwNTA1MTcwMH0.IHySftgt4Vdesr6y-QZ9iyMH_nsIJ_VhK1RlSuY9XgA"
+		}
+	]
+}
